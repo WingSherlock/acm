@@ -41,7 +41,7 @@ int flag=0;
 int main(){
 	int n;
 	list<int> r;
-	list<int>::iterator rr;
+	
 	cin>>n;
 	int sum=0;
 	while(n)
@@ -54,7 +54,7 @@ int main(){
 		}
 		else{
 			//r.remove(b);			    //会删除所有匹配的值
-			r.remove_if([](int n){  //remove_if 加一个函数
+			r.remove_if([](int n){  //remove_if 条件
 				if(n==b&&flag==0){	  //定义一个flag 删除一次之后就为1 为1的时候返回false 就只删除一次就不会删除了
 					flag=1;
 					return true;
